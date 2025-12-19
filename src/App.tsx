@@ -1,12 +1,13 @@
 import './App.css'
 import Header from './components/Header'
+import Hotbar from './components/Hotbar'
 
 function App() {
 
   return (
     <>
     <Header/>
-      <h1>Vite + React</h1>
+    <Hotbar/>
     </>
   )
 }

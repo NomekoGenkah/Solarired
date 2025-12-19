@@ -1,0 +1,168 @@
+/* Base colors aligned with Header */
+:root {
+  --green: #2f7d32; /* natural green */
+  --gray: #7a7a7a;
+  --white: #ffffff;
+}
+
+.hotbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  color: var(--gray);
+  border-bottom: 1px solid #e9ecef;
+  box-sizing: border-box;
+}
+
+/* Selection styling similar to Header */
+.hotbar ::selection {
+  background: #3f9241;
+  color: #000000;
+}
+.hotbar ::-moz-selection {
+  background: #388539;
+  color: #000000;
+}
+
+.hotbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hotbar__logo {
+  display: inline-flex;
+  align-items: center;
+  height: clamp(52px, 6.5vw, 72px);
+}
+
+.hotbar__logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.hotbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--gray);
+  font: inherit;
+  padding: 0.65rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0; /* underline must look flat */
+  border-bottom: 3px solid transparent; /* reserve space to avoid layout shift */
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+.icon-only svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* Dropdown arrow indicator */
+.nav-item--dropdown > .nav-link::after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor; /* down arrow */
+}
+
+/* Dropdown */
+.nav-item--dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-radius: 0px;
+  padding: 0; /* remove inner white edge */
+  overflow: hidden; /* clip hover background to rounded border */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 140ms ease, transform 140ms ease, visibility 0s linear 140ms;
+  z-index: 20;
+}
+
+.nav-item--dropdown:hover .dropdown,
+.nav-item--dropdown:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.dropdown__item {
+  display: block;
+  padding: 0.55rem 0.65rem;
+  color: var(--gray);
+  text-decoration: none;
+  border-radius: 0; /* items without rounded corners */
+  border-left: none; /* remove highlight line inside dropdown */
+  transition: color 220ms ease, background-color 220ms ease; /* leve transición */
+}
+
+.dropdown__item:hover,
+.dropdown__item:focus {
+  color: #ffffff; /* white text */
+  background: #3a3a3a; /* dark gray background */
+  outline: none;
+}
+
+/* Small screens */
+@media (max-width: 720px) {
+  .hotbar__content {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hotbar__logo {
+    height: clamp(44px, 9vw, 58px);
+  }
+
+  .hotbar__nav {
+    width: 100%;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.55rem 0.6rem;
+  }
+}
