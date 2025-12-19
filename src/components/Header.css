@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+/* Selection styling inside header */
+.top-bar ::selection {
+  background: #3f9241; /* lighter natural green */
+  color: #000000;
+}
+.top-bar ::-moz-selection {
+  background: #388539; /* lighter natural green */
+  color: #000000;
+}
+
 .top-bar__content {
   width: 100%;
   margin: 0;
@@ -48,8 +58,13 @@
   overflow-wrap: anywhere;
 }
 
+.contact-link {
+  cursor: pointer;
+}
+
 .contact-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #f5f7f8;
 }
 
 @media (max-width: 640px) {
