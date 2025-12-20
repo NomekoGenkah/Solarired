@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

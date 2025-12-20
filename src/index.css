@@ -17,6 +17,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: #3f9241;
+  color: #000000;
+}
+
+::-moz-selection {
+  background: #388539;
+  color: #000000;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
