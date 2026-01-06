@@ -10,7 +10,7 @@ const Header = () => {
               <path d="M12 2.5c-3.27 0-5.93 2.55-5.93 5.7 0 4.35 5.13 11.37 5.35 11.66.16.22.42.34.68.34.27 0 .52-.12.69-.33.22-.29 5.35-7.3 5.35-11.67 0-3.15-2.66-5.7-5.94-5.7zm0 8.46a2.77 2.77 0 1 1 0-5.54 2.77 2.77 0 0 1 0 5.54z" />
             </svg>
           </span>
-          <span className="contact-text">Santiago, Chile</span>
+          <span className="contact-text">La Serena, Chile</span>
         </div>
         <div className="contact-item">
           <span className="icon" aria-hidden="true">

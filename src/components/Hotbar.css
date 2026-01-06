@@ -80,6 +80,19 @@
   fill: currentColor;
 }
 
+/* Cart icon styles */
+.cart-icon {
+  color: var(--green);
+  border: 1px solid transparent;
+}
+
+.cart-icon:hover,
+.cart-icon:focus {
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  border-radius: 0;
+}
+
 /* Dropdown arrow indicator */
 .nav-item--dropdown > .nav-link::after {
   content: "";

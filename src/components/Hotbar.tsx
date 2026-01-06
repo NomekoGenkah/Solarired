@@ -38,7 +38,7 @@ const Hotbar: React.FC = () => {
           </li>
 
           <li className="nav-item" role="none">
-            <button className="nav-link icon-only" role="menuitem" aria-label="Carrito">
+            <button className="nav-link icon-only cart-icon" role="menuitem" aria-label="Carrito">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.2 6l.8 2h10.55c.75 0 1.25.75 1.02 1.46l-1.62 5.02c-.2.63-.78 1.05-1.44 1.05H9.12c-.66 0-1.24-.42-1.44-1.05L5.25 4H3V2h2.73c.66 0 1.24.42 1.44 1.05L7.2 6z" />
               </svg>

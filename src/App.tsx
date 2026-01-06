@@ -19,7 +19,7 @@ function App() {
       <Hotbar/>
     </div>
     <MediaHero fotos={fotos_po}></MediaHero>
-    <MediaHero foto='src/assets/paneles.jpeg'/>
+    <MediaHero video='src/assets/video_reja.mp4'/>
     <MediaHero foto="src/assets/solarired_logo.jpg"></MediaHero>
     <MediaHero foto="src/assets/solarired_logo.jpg"></MediaHero>
     <MediaHero foto="src/assets/solarired_logo.jpg"></MediaHero>
