@@ -18,8 +18,8 @@ const MediaHero: React.FC<MediaHeroProps> = ({
   video,
   videos,
   className = '',
-  overlayTitle = 'Lorem Ipsum Dolor Sit Amet',
-  overlayText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  overlayTitle = 'SOLARIRED',
+  overlayText = 'Energía solar accesible y sostenible para un futuro mejor.',
   fadeInterval = 5000
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)

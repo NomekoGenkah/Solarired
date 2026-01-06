@@ -1,0 +1,109 @@
+/* Overlay and sidebar */
+:root {
+  --overlay-bg: rgba(0,0,0,0.45);
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --text: #2f2f2f;
+  --muted: #6b7280;
+  --green: #2f7d32;
+}
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  display: none;
+  z-index: 1000;
+}
+
+.cart-overlay--open {
+  display: block;
+  background: var(--overlay-bg);
+}
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(380px, 92vw);
+  height: 100vh;
+  background: var(--sidebar-bg);
+  border-left: 1px solid var(--sidebar-border);
+  box-shadow: -8px 0 22px rgba(0,0,0,0.18);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.cart-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--sidebar-border);
+}
+
+.cart-sidebar__close {
+  appearance: none;
+  border: 1px solid var(--sidebar-border);
+  background: #fff;
+  border-radius: 1px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.cart-sidebar__body {
+  overflow: auto;
+  padding: 0.75rem;
+}
+
+.cart-empty { color: var(--muted); }
+
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--sidebar-border);
+  padding: 0.5rem 0.6rem;
+}
+
+.cart-item__info { display: grid; }
+.cart-item__title { color: var(--text); font-weight: 600; }
+.cart-item__price { color: var(--muted); }
+
+.cart-item__remove {
+  appearance: none;
+  background: #fff;
+  border: 1px solid var(--sidebar-border);
+  border-radius: 1px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.cart-sidebar__footer {
+  border-top: 1px solid var(--sidebar-border);
+  padding: 0.75rem;
+}
+
+.cart-quote-btn {
+  width: 100%;
+  appearance: none;
+  background: var(--green);
+  color: #fff;
+  border: 1px solid var(--green);
+  border-radius: 1px;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+
+.cart-quote-btn:hover, .cart-quote-btn:focus {
+  background: #256028;
+  border-color: #256028;
+}

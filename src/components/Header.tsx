@@ -18,8 +18,8 @@ const Header = () => {
               <path d="M20.5 5.5H3.5c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h17c.55 0 1-.45 1-1v-11c0-.55-.45-1-1-1zm-1.4 2.18-6.31 4.3a1 1 0 0 1-1.08 0l-6.31-4.3a.25.25 0 0 1 .14-.45h13.42a.25.25 0 0 1 .14.45z" />
             </svg>
           </span>
-          <a className="contact-text contact-link" href="mailto:contacto@solarired.com">
-            contacto@solarired.com
+          <a className="contact-text contact-link" href="mailto:contacto@solarired.cl">
+            contacto@solarired.cl
           </a>
         </div>
         <div className="contact-item">
