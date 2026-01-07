@@ -6,13 +6,18 @@ import Kits, { type KitItem } from './components/Kits'
 import CartSidebar from './components/CartSidebar'
 import React from 'react'
 
+// Importar imágenes como módulos de Vite para máxima compatibilidad
+import paneles2 from './assets/paneles2.jpeg'
+import paneles from './assets/paneles.jpeg'
+import paneles3 from './assets/paneles3.jpeg'
+import panel from './assets/panel.jpeg'
 
 function App() {
   const fotos_po = [
-    'src/assets/paneles2.jpeg',
-    'src/assets/paneles.jpeg',
-    'src/assets/paneles3.jpeg',
-    'src/assets/panel.jpeg',
+    paneles2,
+    paneles,
+    paneles3,
+    panel,
   ];
 
   const kitsData: KitItem[] = [
@@ -21,28 +26,28 @@ function App() {
       title: 'Kit Básico 1kW',
       description: 'Ideal para pequeños consumos: iluminación y carga de dispositivos.',
       price: 349000,
-      image: 'src/assets/paneles.jpeg'
+      image: paneles
     },
     {
       id: 'kit-home',
       title: 'Kit Hogar 3kW',
       description: 'Cobertura para hogar estándar: refrigerador, TV y luces.',
       price: 899000,
-      image: 'src/assets/paneles2.jpeg'
+      image: paneles2
     },
     {
       id: 'kit-pro',
       title: 'Kit Pro 5kW',
       description: 'Para mayores demandas y equipos eléctricos adicionales.',
       price: 1499000,
-      image: 'src/assets/paneles3.jpeg'
+      image: paneles3
     },
     {
       id: 'kit-offgrid',
       title: 'Kit Off-Grid 2kW',
       description: 'Autonomía fuera de red con baterías incluidas.',
       price: 1199000,
-      image: 'src/assets/panel.jpeg'
+      image: panel
     }
   ]
 

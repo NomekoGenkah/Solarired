@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Usar base: '/' para dominio personalizado
+  // Para gh-pages con ruta: '/<repo>/'
   base: '/',
   plugins: [
     react({
@@ -11,4 +13,5 @@ export default defineConfig({
       },
     }),
   ],
+  assetsInclude: ['**/*.mp4', '**/*.webm', '**/*.ogg'],
 })
