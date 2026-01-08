@@ -30,7 +30,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ open, items, onClose, onRemov
       `Total estimado: $${total.toLocaleString('es-CL')}`
     ].join('\n')
 
-    const phone = '56936474422'
+    const phone = '56931490321'
     const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`
     window.open(url, '_blank')
   }
