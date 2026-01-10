@@ -11,6 +11,11 @@ const Hotbar: React.FC<HotbarProps> = ({ onCartClick }) => {
     const el = document.getElementById('kits')
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
+
+  const scrollToEquipos = () => {
+    const el = document.getElementById('equipos')
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
   return (
     <nav className="hotbar" aria-label="Hotbar de navegación">
       <div className="hotbar__content">
@@ -41,12 +46,13 @@ const Hotbar: React.FC<HotbarProps> = ({ onCartClick }) => {
             </button>
           </li>
 
-          <li className="nav-item" role="none">
-            <button className="nav-link" role="menuitem">Cotizador</button>
-          </li>
 
           <li className="nav-item" role="none">
             <button className="nav-link" role="menuitem" onClick={scrollToKits}>Kits</button>
+          </li>
+
+          <li className="nav-item" role="none">
+            <button className="nav-link" role="menuitem" onClick={scrollToEquipos}>Equipos</button>
           </li>
 
           <li className="nav-item" role="none">

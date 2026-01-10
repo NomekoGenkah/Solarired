@@ -1,10 +1,13 @@
 import React from 'react'
 import './CartSidebar.css'
 import { type KitItem } from './Kits'
+import { type EquipoItem } from './Equipos'
+
+type CartItem = KitItem | EquipoItem
 
 type CartSidebarProps = {
   open: boolean
-  items: KitItem[]
+  items: CartItem[]
   onClose: () => void
   onRemoveItem: (id: string) => void
 }
@@ -13,7 +16,9 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ open, items, onClose, onRemov
   const handleQuote = () => {
     if (!items.length) return
     const grouped = items.reduce<Record<string, { title: string; unit: number; qty: number }>>((acc, it) => {
-      if (!acc[it.id]) acc[it.id] = { title: it.title, unit: it.price, qty: 0 }
+      const title = 'title' in it ? it.title : it.nombre
+      const price = 'price' in it ? it.price : it.precioUnitarioCLP
+      if (!acc[it.id]) acc[it.id] = { title, unit: price, qty: 0 }
       acc[it.id].qty += 1
       return acc
     }, {})
@@ -23,7 +28,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ open, items, onClose, onRemov
       return `- ${title} x${qty} ($${lineTotal.toLocaleString('es-CL')})`
     })
 
-    const total = items.reduce((sum, it) => sum + it.price, 0)
+    const total = items.reduce((sum, it) => sum + ('price' in it ? it.price : it.precioUnitarioCLP), 0)
     const message = [
       'Hola, quiero cotizar los siguientes productos:',
       ...lines,
@@ -47,21 +52,25 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ open, items, onClose, onRemov
             <p className="cart-empty">Tu carrito está vacío.</p>
           ) : (
             <ul className="cart-list">
-              {items.map((item) => (
-                <li key={item.id} className="cart-item">
-                  <div className="cart-item__info">
-                    <span className="cart-item__title">{item.title}</span>
-                    <span className="cart-item__price">${item.price.toLocaleString()}</span>
-                  </div>
-                  <button
-                    className="cart-item__remove"
-                    onClick={() => onRemoveItem(item.id)}
-                    aria-label={`Eliminar ${item.title} del carrito`}
-                  >
-                    Eliminar
-                  </button>
-                </li>
-              ))}
+              {items.map((item) => {
+                const itemTitle = 'title' in item ? item.title : item.nombre
+                const itemPrice = 'price' in item ? item.price : item.precioUnitarioCLP
+                return (
+                  <li key={item.id} className="cart-item">
+                    <div className="cart-item__info">
+                      <span className="cart-item__title">{itemTitle}</span>
+                      <span className="cart-item__price">${itemPrice.toLocaleString()}</span>
+                    </div>
+                    <button
+                      className="cart-item__remove"
+                      onClick={() => onRemoveItem(item.id)}
+                      aria-label={`Eliminar ${itemTitle} del carrito`}
+                    >
+                      Eliminar
+                    </button>
+                  </li>
+                )
+              })}
             </ul>
           )}
         </div>

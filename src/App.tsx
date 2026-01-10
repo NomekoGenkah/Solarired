@@ -3,8 +3,9 @@ import Header from './components/Header'
 import Hotbar from './components/Hotbar'
 import MediaHero from './components/MediaHero'
 import Kits, { type KitItem } from './components/Kits'
+import Equipos, { type EquipoItem } from './components/Equipos'
+import { equiposData } from './equiposData'
 import CartSidebar from './components/CartSidebar'
-import About from './components/About'
 import Contact from './components/Contact'
 import React from 'react'
 
@@ -54,9 +55,9 @@ function App() {
   ]
 
   const [cartOpen, setCartOpen] = React.useState(false)
-  const [cartItems, setCartItems] = React.useState<KitItem[]>([])
+  const [cartItems, setCartItems] = React.useState<(KitItem | EquipoItem)[]>([])
 
-  const addToCart = (item: KitItem) => {
+  const addToCart = (item: KitItem | EquipoItem) => {
     setCartItems((prev) => [...prev, item])
     setCartOpen(true)
   }
@@ -72,8 +73,8 @@ function App() {
       <Hotbar onCartClick={() => setCartOpen(true)}/>
     </div>
     <MediaHero fotos={fotos_po} showLogo={true}></MediaHero>
-    <About />
     <Kits items={kitsData} onAddToCart={addToCart} />
+    <Equipos items={equiposData} onAddToCart={addToCart} />
     <Contact />
     <CartSidebar open={cartOpen} items={cartItems} onClose={() => setCartOpen(false)} onRemoveItem={removeFromCart} />
     </>
