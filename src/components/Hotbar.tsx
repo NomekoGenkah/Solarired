@@ -20,17 +20,25 @@ const Hotbar: React.FC<HotbarProps> = ({ onCartClick }) => {
 
         <ul className="hotbar__nav" role="menubar">
           <li className="nav-item" role="none">
-            <button className="nav-link" role="menuitem">Home</button>
+            <button
+              className="nav-link"
+              role="menuitem"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              Home
+            </button>
           </li>
-          <li className="nav-item nav-item--dropdown" role="none">
-            <button className="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+          <li className="nav-item" role="none">
+            <button
+              className="nav-link"
+              role="menuitem"
+              onClick={() => {
+                const el = document.getElementById('about');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
               Quiénes somos
             </button>
-            <div className="dropdown" role="menu" aria-label="Submenú: Quiénes somos">
-              <a href="#" className="dropdown__item" role="menuitem">Misión</a>
-              <a href="#" className="dropdown__item" role="menuitem">Equipo</a>
-              <a href="#" className="dropdown__item" role="menuitem">Historia</a>
-            </div>
           </li>
 
           <li className="nav-item" role="none">
@@ -42,7 +50,16 @@ const Hotbar: React.FC<HotbarProps> = ({ onCartClick }) => {
           </li>
 
           <li className="nav-item" role="none">
-            <button className="nav-link" role="menuitem">Contacto</button>
+            <button
+              className="nav-link"
+              role="menuitem"
+              onClick={() => {
+                const el = document.getElementById('contact');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
+              Contacto
+            </button>
           </li>
 
           <li className="nav-item" role="none">

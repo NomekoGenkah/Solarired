@@ -4,6 +4,8 @@ import Hotbar from './components/Hotbar'
 import MediaHero from './components/MediaHero'
 import Kits, { type KitItem } from './components/Kits'
 import CartSidebar from './components/CartSidebar'
+import About from './components/About'
+import Contact from './components/Contact'
 import React from 'react'
 
 // Importar imágenes como módulos de Vite para máxima compatibilidad
@@ -69,8 +71,10 @@ function App() {
       <Header/>
       <Hotbar onCartClick={() => setCartOpen(true)}/>
     </div>
-    <MediaHero fotos={fotos_po}></MediaHero>
+    <MediaHero fotos={fotos_po} showLogo={true}></MediaHero>
+    <About />
     <Kits items={kitsData} onAddToCart={addToCart} />
+    <Contact />
     <CartSidebar open={cartOpen} items={cartItems} onClose={() => setCartOpen(false)} onRemoveItem={removeFromCart} />
     </>
   )

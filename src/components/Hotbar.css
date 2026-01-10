@@ -167,5 +167,22 @@
 
   .nav-link {
     padding: 0.55rem 0.6rem;
+    height: auto;
+    min-height: 44px;
+    max-height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .icon-only {
+    min-width: 44px;
+    min-height: 44px;
+    max-height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
 }

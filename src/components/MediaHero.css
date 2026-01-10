@@ -1,3 +1,32 @@
+.media-hero__title-solari {
+  color: #2176ff;
+}
+.media-hero__title-red {
+  color: #ff7a00;
+}
+/* Logo sobre la imagen de fondo */
+.media-hero__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background: none;
+  box-shadow: none;
+}
+
+.media-hero__logo img {
+  width: 140px;
+  height: 140px;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: none;
+  padding: 0;
+}
 .media-hero {
   position: relative;
   width: 100%;

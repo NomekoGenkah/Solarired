@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './MediaHero.css'
+import logo from '../assets/solarired_logo.jpg'
 
 type MediaHeroProps = {
   foto?: string
@@ -10,6 +11,7 @@ type MediaHeroProps = {
   overlayTitle?: string
   overlayText?: string
   fadeInterval?: number // milisegundos para el cambio de fotos
+  showLogo?: boolean // Nuevo: mostrar logo sobre la imagen
 }
 
 const MediaHero: React.FC<MediaHeroProps> = ({
@@ -20,7 +22,8 @@ const MediaHero: React.FC<MediaHeroProps> = ({
   className = '',
   overlayTitle = 'SOLARIRED',
   overlayText = 'Energía solar accesible y sostenible para un futuro mejor.',
-  fadeInterval = 5000
+  fadeInterval = 5000,
+  showLogo = false
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
@@ -110,7 +113,19 @@ const MediaHero: React.FC<MediaHeroProps> = ({
       <div className="media-hero__overlay-dark" aria-hidden="true" />
 
       <div className="media-hero__content">
-        <h1 className="media-hero__title">{overlayTitle}</h1>
+        {showLogo && (
+          <div className="media-hero__logo">
+            <img src={logo} alt="Logo Solarired" />
+          </div>
+        )}
+        <h1 className="media-hero__title">
+          {overlayTitle === 'SOLARIRED' ? (
+            <>
+              <span className="media-hero__title-solari">SOLARI</span>
+              <span className="media-hero__title-red">RED</span>
+            </>
+          ) : overlayTitle}
+        </h1>
         <p className="media-hero__text">{overlayText}</p>
       </div>
     </section>
