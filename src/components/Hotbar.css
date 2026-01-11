@@ -41,7 +41,8 @@
 .hotbar__nav {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: clamp(0.25rem, 1vw, 0.5rem);
+  flex-wrap: wrap; /* allow items to wrap so all remain visible */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -59,7 +60,8 @@
   cursor: pointer;
   color: var(--gray);
   font: inherit;
-  padding: 0.65rem 0.9rem;
+  font-size: clamp(0.9rem, 0.82rem + 0.2vw, 1rem);
+  padding: clamp(0.45rem, 0.36rem + 0.25vw, 0.65rem) clamp(0.6rem, 0.5rem + 0.4vw, 0.9rem);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -75,8 +77,8 @@
 }
 
 .icon-only svg {
-  width: 22px;
-  height: 22px;
+  width: clamp(18px, 2.2vw, 22px);
+  height: clamp(18px, 2.2vw, 22px);
   fill: currentColor;
 }
 
@@ -163,6 +165,7 @@
     width: 100%;
     justify-content: center;
     gap: 0.25rem;
+    flex-wrap: wrap; /* ensure wrapping also on small screens */
   }
 
   .nav-link {

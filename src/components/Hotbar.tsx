@@ -42,7 +42,7 @@ const Hotbar: React.FC<HotbarProps> = ({ onCartClick }) => {
                 if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
             >
-              Quiénes somos
+              Cómo trabajamos
             </button>
           </li>
 
