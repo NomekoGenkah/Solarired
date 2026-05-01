@@ -1,7 +1,7 @@
 import './Contact.css';
 import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
 
-const CONTACT_EMAIL = 'contacto@solarired.cl';
+const CONTACT_EMAIL = 'solarired.venta@gmail.com';
 const WHATSAPP_URL = 'https://wa.me/56931490321';
 const INSTAGRAM_URL = 'https://instagram.com/solarired';
 const FACEBOOK_URL = 'https://facebook.com/solarired';
