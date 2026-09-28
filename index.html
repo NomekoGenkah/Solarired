@@ -1,10 +1,173 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/src/assets/solarired_logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>solarired</title>
+    
+    <!-- SEO Básico y Canonical -->
+    <title>Solarired | Paneles Solares e Instalación Solar en La Serena y Coquimbo</title>
+    <meta name="description" content="Instalación de paneles solares, kits solares para parcelas y sistemas de baterías de litio en La Serena, Coquimbo, Ovalle y la IV Región. Cotiza tu proyecto solar." />
+    <meta name="keywords" content="paneles solares La Serena, instalacion paneles solares Coquimbo, kits solares La Serena, paneles solares parcelas, baterias de litio solar, energia solar Ovalle, Vicuña, Illapel, Solarired" />
+    <meta name="author" content="Solarired" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://solarired.cl/" />
+    
+    <!-- Favicon e Iconografía -->
+    <link rel="icon" type="image/jpeg" href="/solarired_logo.jpg" />
+    <link rel="apple-touch-icon" href="/solarired_logo.jpg" />
+
+    <!-- Open Graph / Redes Sociales / WhatsApp -->
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Solarired | Paneles Solares e Instalación Solar en La Serena y Coquimbo" />
+    <meta property="og:description" content="Especialistas en instalación de paneles solares, kits solares para parcelas y sistemas híbridos/off-grid en la Región de Coquimbo. Cotiza con nosotros." />
+    <meta property="og:url" content="https://solarired.cl/" />
+    <meta property="og:site_name" content="Solarired" />
+    <meta property="og:image" content="https://solarired.cl/solarired_logo.jpg" />
+    <meta property="og:image:alt" content="Solarired - Instalación de Paneles Solares en La Serena y Coquimbo" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Solarired | Paneles Solares en La Serena y Coquimbo" />
+    <meta name="twitter:description" content="Instalación de paneles solares y kits para casas y parcelas en la Región de Coquimbo." />
+    <meta name="twitter:image" content="https://solarired.cl/solarired_logo.jpg" />
+
+    <!-- Google Search Console (Reemplazar content con el token provisto al verificar en GSC) -->
+    <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_AQUI" />
+
+    <!-- Geo-etiquetas para SEO Local -->
+    <meta name="geo.region" content="CL-CO" />
+    <meta name="geo.placename" content="La Serena, Región de Coquimbo" />
+    <meta name="geo.position" content="-29.9027;-71.2519" />
+    <meta name="ICBM" content="-29.9027, -71.2519" />
+
+    <!-- Schema.org: Negocio Local Solar (LocalBusiness / SolarInstallationBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://solarired.cl/#localbusiness",
+      "name": "Solarired",
+      "alternateName": "Solarired Energía Solar",
+      "description": "Empresa especializada en instalación de sistemas solares fotovoltaicos, kits solares para parcelas y viviendas, sistemas híbridos, off-grid y baterías de litio en la Región de Coquimbo.",
+      "url": "https://solarired.cl/",
+      "logo": "https://solarired.cl/solarired_logo.jpg",
+      "image": "https://solarired.cl/solarired_logo.jpg",
+      "telephone": "+56931490321",
+      "email": "solarired.venta@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Serena",
+        "addressRegion": "Región de Coquimbo",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.9027,
+        "longitude": -71.2519
+      },
+      "areaServed": [
+        { "@type": "City", "name": "La Serena" },
+        { "@type": "City", "name": "Coquimbo" },
+        { "@type": "City", "name": "Ovalle" },
+        { "@type": "City", "name": "Vicuña" },
+        { "@type": "City", "name": "Illapel" },
+        { "@type": "AdministrativeArea", "name": "Región de Coquimbo" }
+      ],
+      "sameAs": [
+        "https://instagram.com/solarired",
+        "https://facebook.com/solarired"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org: Catálogo de Kits Solares (Product & Offer) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Kits Solares Solarired",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "KIT CABAÑA 3000 – Autonomía básica y segura",
+          "description": "Ideal para cabañas, parcelas y casas pequeñas en La Serena y Región de Coquimbo. Incluye 5 paneles 540W, inversor 3000W y batería de litio 3000W.",
+          "brand": { "@type": "Brand", "name": "Solarired" },
+          "offers": {
+            "@type": "Offer",
+            "price": "1990000",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://solarired.cl/#kits"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "KIT CASA 5000 – El favorito para hogares",
+          "description": "Ideal para casas y parcelas que buscan reducir su cuenta de luz y tener respaldo solar. Incluye 7 paneles 580W, inversor 6000W PV y batería de litio 5000W.",
+          "brand": { "@type": "Brand", "name": "Solarired" },
+          "offers": {
+            "@type": "Offer",
+            "price": "2550000",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://solarired.cl/#kits"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 3,
+          "name": "KIT CASA PRO 8000 – Máxima potencia y rendimiento",
+          "description": "Para consumos exigentes y parcelas grandes. Incluye 12 paneles 585W, inversor 8000W, batería de litio 10000W y medidor digital WiFi.",
+          "brand": { "@type": "Brand", "name": "Solarired" },
+          "offers": {
+            "@type": "Offer",
+            "price": "4900000",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://solarired.cl/#kits"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org: Preguntas Frecuentes (FAQPage) para Rich Snippets en Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Instalan paneles solares en La Serena, Coquimbo y zonas de parcelas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en Solarired realizamos instalaciones de sistemas solares fotovoltaicos en toda la Región de Coquimbo, incluyendo La Serena, Coquimbo, Ovalle, Vicuña, Illapel, Valle de Elqui y parcelas de agrado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué kit solar se recomienda para una parcela sin empalme eléctrico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para parcelas sin conexión a la red eléctrica recomendamos nuestros Kits Solares Off-Grid o Híbridos con baterías de litio (Kit Cabaña 3000 o Kit Casa 5000), diseñados para alimentar refrigerador, iluminación, TV, bombas de agua y electrodomésticos de forma continua."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se solicita una cotización con Solarired?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes solicitar una cotización directa e inmediata a través de nuestro botón de WhatsApp (+56 9 3149 0321) indicando la ubicación de tu propiedad y tus requerimientos de consumo eléctrico."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

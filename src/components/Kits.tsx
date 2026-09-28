@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
 import './Kits.css'
 
 export type KitItem = {
@@ -14,14 +15,30 @@ type KitsProps = {
   onAddToCart: (item: KitItem) => void
 }
 
+const PHONE = '56931490321'
+
 const Kits: React.FC<KitsProps> = ({ items, onAddToCart }) => {
   return (
     <section id="kits" className="kits" aria-labelledby="kits-title">
-      <h2 id="kits-title" className="kits__title">Kits Solares</h2>
+      <div className="kits__header">
+        <h2 id="kits-title" className="kits__title">Kits Solares en La Serena y Coquimbo</h2>
+        <p className="kits__intro">
+          Sistemas fotovoltaicos completos con inversor y baterías de litio, diseñados para autonomía total y ahorro en parcelas y viviendas de la Región de Coquimbo.
+        </p>
+      </div>
+
       <div className="kits__grid">
         {items.map((kit) => (
           <article key={kit.id} className="kit-card">
-            <img className="kit-card__image" src={kit.image} alt={kit.title} />
+            <img
+              className="kit-card__image"
+              src={kit.image}
+              alt={`Kit Solar ${kit.title} para parcela y vivienda en La Serena y Coquimbo`}
+              loading="lazy"
+              decoding="async"
+              width="300"
+              height="160"
+            />
             <div className="kit-card__body">
               <h3 className="kit-card__title">{kit.title}</h3>
               <p>{kit.description}</p>
@@ -67,6 +84,19 @@ const Kits: React.FC<KitsProps> = ({ items, onAddToCart }) => {
               {kit.id === 'kit-pro' && (
                 <p>Un kit de alto desempeño para consumos exigentes: electrodomésticos pesados, bombas, computadores, sistemas completos de hogar y más.</p>
               )}
+              
+              <div className="kit-card__actions">
+                <a
+                  href={`https://api.whatsapp.com/send?phone=${PHONE}&text=${encodeURIComponent(`Hola Solarired, me interesa cotizar el ${kit.title} ($${kit.price.toLocaleString('es-CL')}) para mi propiedad en la Región de Coquimbo.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="kit-card__whatsapp-btn"
+                  aria-label={`Cotizar ${kit.title} por WhatsApp`}
+                >
+                  <FaWhatsapp /> Cotizar por WhatsApp
+                </a>
+              </div>
+
               <div className="kit-card__footer">
                 <span className="kit-card__price"> ${kit.price.toLocaleString()}</span>
                 <button

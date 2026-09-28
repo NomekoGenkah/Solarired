@@ -10,14 +10,14 @@ const About: React.FC<AboutProps> = ({ videoSrc }) => {
     <section className="about-section" id="about">
       <div className="about-content">
         <div className="about-text">
-          <h2>¿Cómo trabajamos?</h2>
+          <h2>Instalación Solar Confiable: ¿Cómo trabajamos en la Región de Coquimbo?</h2>
           <p>
-            En Solarired queremos que tu experiencia sea segura, confiable y sin complicaciones.
-            Por eso, no pedimos anticipo para iniciar tu proyecto solar.
+            En <strong>Solarired</strong> queremos que tu transición hacia la energía solar sea segura, transparente y sin riesgos.
+            Por eso, <strong>no pedimos anticipo</strong> para iniciar tu proyecto de paneles solares en La Serena, Coquimbo, Ovalle y zonas de parcelas.
           </p>
           <p>
             Solo solicitamos que dejes registrada nuestra cuenta corriente en tu banco antes de la instalación.
-            Esto nos permite que, el día de la entrega e instalación final, puedas realizar el pago de manera fácil y
+            Esto nos permite que, el día de la entrega e instalación final certificada, puedas realizar el pago de manera cómoda y
             rápida mediante:
           </p>
           <ul>
@@ -25,11 +25,11 @@ const About: React.FC<AboutProps> = ({ videoSrc }) => {
               Pago con tarjetas en nuestra máquina POS, con opción de hasta 10 cuotas precio contado.
             </li>
             <li>
-              Transferencia directa desde tu banco
+              Transferencia directa desde tu banco.
             </li>
           </ul>
           <p>
-            Así garantizamos transparencia, confianza y un proceso 100% cómodo para ti.
+            Así garantizamos confianza absoluta, máxima transparencia y un servicio técnico cercano para tu tranquilidad.
           </p>
         </div>
         {videoSrc && (
@@ -39,8 +39,10 @@ const About: React.FC<AboutProps> = ({ videoSrc }) => {
               autoPlay
               loop
               muted
+              playsInline
+              preload="metadata"
               className="about-video"
-              aria-label="Video representativo de la empresa"
+              aria-label="Video de instalación de paneles solares en Solarired"
             >
               Tu navegador no soporta la etiqueta de video.
             </video>

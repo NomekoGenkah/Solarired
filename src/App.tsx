@@ -3,12 +3,12 @@ import Header from './components/Header'
 import Hotbar from './components/Hotbar'
 import MediaHero from './components/MediaHero'
 import Kits, { type KitItem } from './components/Kits'
-//import Equipos, { type EquipoItem } from './components/Equipos'
-//import { equiposData } from './equiposData'
-import CartSidebar from './components/CartSidebar'
 import Contact from './components/Contact'
+import CartSidebar from './components/CartSidebar'
 import React from 'react'
 import About from './components/About'
+import LocalSEOSection from './components/LocalSEOSection'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 // Importar imágenes como módulos de Vite para máxima compatibilidad
 import cabana from './assets/cabana.jpeg'
@@ -36,21 +36,21 @@ function App() {
     {
       id: 'kit-cabana',
       title: '🟡 KIT CABAÑA 3000 – Autonomía básica y segura',
-      description: 'Ideal para cabañas, parcelas y casas pequeñas que necesitan energía estable todo el día.',
+      description: 'Ideal para cabañas, parcelas y casas pequeñas en La Serena y Región de Coquimbo que necesitan energía estable todo el día.',
       price: 1990000,
       image: cabana
     },
     {
       id: 'kit-casa',
-      title: '🔵 KIT CASA 5000 – El favorito para hogares',
-      description: 'Ideal para casas que buscan reducir su cuenta de luz y tener respaldo solar día y noche.',
+      title: '🔵 KIT CASA 5000 – El favorito para hogares y parcelas',
+      description: 'Ideal para casas y parcelas que buscan reducir su cuenta de luz y tener respaldo solar día y noche con baterías de litio.',
       price: 2550000,
       image: casa
     },
     {
       id: 'kit-pro',
       title: '🔴 KIT CASA PRO 8000 – Máxima potencia y rendimiento',
-      description: 'Perfecto para casas grandes, emprendimientos o clientes que quieren un sistema sólido, potente y con monitoreo en tiempo real.',
+      description: 'Perfecto para consumos exigentes, parcelas grandes o clientes que quieren un sistema solar sólido con monitoreo en tiempo real.',
       price: 4900000,
       image: premium
     }
@@ -74,10 +74,18 @@ function App() {
       <Header/>
       <Hotbar onCartClick={() => setCartOpen(true)}/>
     </div>
-    <MediaHero fotos={fotos_po} showLogo={true}></MediaHero>
-    <About videoSrc={video_reja} />
-    <Kits items={kitsData} onAddToCart={addToCart} />
-    <Contact />
+    <main>
+      <MediaHero
+        fotos={fotos_po}
+        showLogo={true}
+        overlayText="Soluciones solares fotovoltaicas para parcelas, hogares y empresas en La Serena, Coquimbo y la IV Región. Sin costo de anticipo."
+      />
+      <About videoSrc={video_reja} />
+      <Kits items={kitsData} onAddToCart={addToCart} />
+      <LocalSEOSection />
+      <Contact />
+    </main>
+    <FloatingWhatsApp />
     <CartSidebar open={cartOpen} items={cartItems} onClose={() => setCartOpen(false)} onRemoveItem={removeFromCart} />
     </>
   )

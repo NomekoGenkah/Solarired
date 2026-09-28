@@ -12,8 +12,13 @@ const Hotbar: React.FC<HotbarProps> = ({ onCartClick }) => {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  const scrollToEquipos = () => {
-    const el = document.getElementById('equipos')
+  const scrollToServicios = () => {
+    const el = document.getElementById('servicios')
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  const scrollToCobertura = () => {
+    const el = document.getElementById('cobertura')
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
   return (
@@ -48,11 +53,15 @@ const Hotbar: React.FC<HotbarProps> = ({ onCartClick }) => {
 
 
           <li className="nav-item" role="none">
-            <button className="nav-link" role="menuitem" onClick={scrollToKits}>Kits</button>
+            <button className="nav-link" role="menuitem" onClick={scrollToKits}>Kits Solares</button>
           </li>
 
           <li className="nav-item" role="none">
-            <button className="nav-link" role="menuitem" onClick={scrollToEquipos}>Equipos</button>
+            <button className="nav-link" role="menuitem" onClick={scrollToServicios}>Servicios</button>
+          </li>
+
+          <li className="nav-item" role="none">
+            <button className="nav-link" role="menuitem" onClick={scrollToCobertura}>Cobertura</button>
           </li>
 
           <li className="nav-item" role="none">

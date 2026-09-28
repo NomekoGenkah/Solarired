@@ -13,10 +13,23 @@
   padding: 2rem 1rem;
 }
 
-.kits__title {
+.kits__header {
   max-width: 1280px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
+}
+
+.kits__title {
+  margin: 0 0 0.5rem;
   color: var(--kits-text);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+}
+
+.kits__intro {
+  margin: 0;
+  color: var(--kits-muted);
+  font-size: 1.05rem;
+  max-width: 800px;
 }
 
 .kits__grid {
@@ -52,6 +65,33 @@
 .kit-card__desc {
   margin: 0 0 0.75rem;
   color: var(--kits-muted);
+}
+
+.kit-card__actions {
+  margin: 1rem 0;
+}
+
+.kit-card__whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background-color: #25d366;
+  color: #ffffff;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.kit-card__whatsapp-btn:hover {
+  background-color: #1ebc59;
+  transform: translateY(-2px);
+  color: #ffffff;
 }
 
 .kit-card__footer {

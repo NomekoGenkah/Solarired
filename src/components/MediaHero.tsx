@@ -59,7 +59,9 @@ const MediaHero: React.FC<MediaHeroProps> = ({
         <img
           className={`media-hero__image ${fadeClass}`}
           src={fotos[currentImageIndex]}
-          alt={`Imagen ${currentImageIndex + 1}`}
+          alt={`Instalación de paneles solares fotovoltaicos en La Serena y Región de Coquimbo - Proyecto Solarired ${currentImageIndex + 1}`}
+          loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
+          decoding="async"
         />
       )
     }
@@ -69,7 +71,9 @@ const MediaHero: React.FC<MediaHeroProps> = ({
         <img
           className="media-hero__image"
           src={foto}
-          alt="Imagen de fondo"
+          alt="Instalación de paneles solares fotovoltaicos en La Serena y Coquimbo"
+          loading="eager"
+          decoding="async"
         />
       )
     }
@@ -83,6 +87,7 @@ const MediaHero: React.FC<MediaHeroProps> = ({
           autoPlay
           muted
           playsInline
+          preload="metadata"
           onEnded={handleVideoEnd}
         />
       )
@@ -97,6 +102,7 @@ const MediaHero: React.FC<MediaHeroProps> = ({
           loop
           muted
           playsInline
+          preload="metadata"
         />
       )
     }
@@ -115,16 +121,28 @@ const MediaHero: React.FC<MediaHeroProps> = ({
       <div className="media-hero__content">
         {showLogo && (
           <div className="media-hero__logo">
-            <img src={logo} alt="Logo Solarired" />
+            <img
+              src={logo}
+              alt="Logo de Solarired - Paneles Solares La Serena Coquimbo"
+              width="140"
+              height="140"
+            />
           </div>
         )}
         <h1 className="media-hero__title">
-          {overlayTitle === 'SOLARIRED' ? (
-            <>
-              <span className="media-hero__title-solari">SOLARI</span>
-              <span className="media-hero__title-red">RED</span>
-            </>
-          ) : overlayTitle}
+          <span className="media-hero__brand">
+            {overlayTitle === 'SOLARIRED' ? (
+              <>
+                <span className="media-hero__title-solari">SOLARI</span>
+                <span className="media-hero__title-red">RED</span>
+              </>
+            ) : (
+              overlayTitle
+            )}
+          </span>
+          <span className="media-hero__tagline">
+            Instalación de Paneles Solares en La Serena y Coquimbo
+          </span>
         </h1>
         <p className="media-hero__text">{overlayText}</p>
       </div>
@@ -133,18 +151,3 @@ const MediaHero: React.FC<MediaHeroProps> = ({
 }
 
 export default MediaHero
-
-
-//import MediaHero from './components/MediaHero'
-
-// Una foto
-//<MediaHero foto="/images/solar1.jpg" />
-
-// Carousel de fotos
-//<MediaHero fotos={["/images/solar1.jpg", "/images/solar2.jpg", "/images/solar3.jpg"]} />
-
-// Un video en loop
-//<MediaHero video="/videos/hero.mp4" />
-
-// Videos secuenciales
-//<MediaHero videos={["/videos/intro.mp4", "/videos/panels.mp4"]} />
