@@ -16,20 +16,6 @@
   margin: 0 auto 2.5rem auto;
 }
 
-.seo-badge {
-  display: inline-block;
-  background: #e8f5e9;
-  color: #2f7d32;
-  border: 1px solid #c8e6c9;
-  padding: 4px 14px;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.75rem;
-}
-
 .seo-title {
   font-size: clamp(1.75rem, 3vw, 2.2rem);
   font-weight: 700;

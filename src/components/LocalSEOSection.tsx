@@ -84,7 +84,6 @@ const LocalSEOSection: React.FC = () => {
       {/* Servicios Solares */}
       <div className="seo-container" id="servicios">
         <header className="seo-header">
-          <span className="seo-badge">Especialistas en Energía Solar</span>
           <h2 className="seo-title">Servicios de Instalación Solar en la Región de Coquimbo</h2>
           <p className="seo-subtitle">
             Diseñamos e instalamos soluciones fotovoltaicas personalizadas para hogares, parcelas y empresas en La Serena, Coquimbo y alrededores.
@@ -114,7 +113,6 @@ const LocalSEOSection: React.FC = () => {
       {/* Cobertura Regional */}
       <div className="seo-container seo-coverage" id="cobertura">
         <header className="seo-header">
-          <span className="seo-badge">Presencia Local</span>
           <h2 className="seo-title">Cobertura en La Serena, Coquimbo y Provincias de la IV Región</h2>
           <p className="seo-subtitle">
             Nuestro equipo técnico cubre las principales comunas y valles de la Región de Coquimbo con atención directa y visitas técnicas.
@@ -143,7 +141,6 @@ const LocalSEOSection: React.FC = () => {
       {/* Preguntas Frecuentes SEO */}
       <div className="seo-container seo-faq">
         <header className="seo-header">
-          <span className="seo-badge">Resolvemos tus dudas</span>
           <h2 className="seo-title">Preguntas Frecuentes sobre Paneles Solares en La Serena y Coquimbo</h2>
         </header>
 
