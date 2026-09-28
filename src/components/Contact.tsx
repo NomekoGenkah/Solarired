@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact" aria-label="Información de contacto Solarired">
       <h2>Contacto y Cotizaciones Solarired</h2>
-      <p className="contact-subtitle" style={{ textAlign: 'center', maxWidth: '650px', margin: '0 auto 2rem', color: '#94a3b8' }}>
+      <p className="contact-subtitle">
         Atención técnica directa en La Serena, Coquimbo, Ovalle, Vicuña e Illapel. Escríbenos para evaluar tu proyecto solar sin costo de anticipo.
       </p>
       <div className="contact-grid">

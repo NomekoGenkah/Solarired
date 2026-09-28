@@ -77,20 +77,19 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
-  background-color: #25d366;
+  background-color: var(--kits-green);
   color: #ffffff;
-  padding: 0.65rem 1rem;
-  border-radius: 6px;
-  font-size: 0.95rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 1px;
+  font-size: 0.92rem;
   font-weight: 600;
   text-decoration: none;
   box-sizing: border-box;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .kit-card__whatsapp-btn:hover {
-  background-color: #1ebc59;
-  transform: translateY(-2px);
+  background-color: #235e26;
   color: #ffffff;
 }
 
